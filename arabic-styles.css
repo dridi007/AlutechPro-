@@ -1,0 +1,20 @@
+body {
+    direction: rtl;
+    font-family: 'Cairo', 'Arial', sans-serif;
+}
+
+.logo {
+    font-family: 'Cairo', 'Arial', sans-serif;
+}
+
+nav ul {
+    flex-direction: row-reverse;
+}
+
+.services-grid {
+    direction: rtl;
+}
+
+.service-card {
+    font-family: 'Cairo', 'Arial', sans-serif;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - منجرة الألمنيوم المحترفة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="fr">Français</button>
+    </div>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="auth-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">Alutech Pro</span>
+                        <span class="logo-slogan" data-trans="company-tagline"></span>
+                    </div>
+                </a>
+                <h1 class="auth-title" data-trans="login-title">تسجيل الدخول</h1>
+                <p class="auth-subtitle" data-trans="login-subtitle">مرحباً بعودتك! يرجى تسجيل الدخول للمتابعة</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email" data-trans="email">البريد الإلكتروني</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required data-trans-placeholder="email-placeholder">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="password-header">
+                        <label for="password" data-trans="password">كلمة المرور</label>
+                        <a href="#" class="forgot-password" data-trans="forgot-password">نسيت كلمة المرور؟</a>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" required data-trans-placeholder="password-placeholder">
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group remember-me">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember">
+                        <span class="checkmark"></span>
+                        <span data-trans="remember-me">تذكرني</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span data-trans="login-button">تسجيل الدخول</span>
+                </button>
+            </form>
+
+            <div class="auth-separator">
+                <span data-trans="or">أو</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    <span data-trans="login-with-google">تسجيل الدخول عبر Google</span>
+                </button>
+                <button class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span data-trans="login-with-facebook">تسجيل الدخول عبر Facebook</span>
+                </button>
+            </div>
+
+            <p class="auth-footer">
+                <span data-trans="no-account">ليس لديك حساب؟</span>
+                <a href="register.html" class="create-account" data-trans="create-account">إنشاء حساب جديد</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="js/translations.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

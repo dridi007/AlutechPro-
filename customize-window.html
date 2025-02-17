@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تخصيص النوافذ - منجرة الألمنيوم المحترفة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="fr">Français</button>
+    </div>
+
+    <main class="product-customizer">
+        <div class="product-view">
+            <div class="product-preview">
+                <div class="window-frame" id="windowPreview">
+                    <img src="images/window-frame.png" alt="إطار النافذة" class="frame-image">
+                    <div class="window-glass"></div>
+                    <div class="window-handle"></div>
+                </div>
+                <div class="view-controls">
+                    <button class="view-btn" data-view="front">
+                        <i class="fas fa-eye"></i>
+                        <span>أمامي</span>
+                    </button>
+                    <button class="view-btn" data-view="side">
+                        <i class="fas fa-eye"></i>
+                        <span>جانبي</span>
+                    </button>
+                    <button class="view-btn" data-view="3d">
+                        <i class="fas fa-cube"></i>
+                        <span>ثلاثي الأبعاد</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 class="product-title">نافذة ألمنيوم بإطار مزدوج</h1>
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>(4.5/5)</span>
+                </div>
+                <p class="product-description">
+                    نافذة ألمنيوم عالية الجودة بإطار مزدوج للعزل الحراري والصوتي الممتاز.
+                    مثالية للمنازل العصرية والمكاتب.
+                </p>
+                
+                <div class="customization-section">
+                    <h2>تخصيص النافذة</h2>
+                    
+                    <div class="option-group">
+                        <h3>اختر النموذج</h3>
+                        <div class="window-models">
+                            <button class="model-btn active" data-model="sliding">
+                                <img src="images/sliding-window.png" alt="نافذة منزلقة">
+                                <span>منزلقة</span>
+                            </button>
+                            <button class="model-btn" data-model="casement">
+                                <img src="images/casement-window.png" alt="نافذة مفصلية">
+                                <span>مفصلية</span>
+                            </button>
+                            <button class="model-btn" data-model="fixed">
+                                <img src="images/fixed-window.png" alt="نافذة ثابتة">
+                                <span>ثابتة</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group">
+                        <h3>لون الإطار</h3>
+                        <div class="color-picker">
+                            <div class="preset-colors">
+                                <button class="color-btn active" data-color="#FFFFFF" style="background-color: #FFFFFF">
+                                    <span>أبيض</span>
+                                </button>
+                                <button class="color-btn" data-color="#C0C0C0" style="background-color: #C0C0C0">
+                                    <span>فضي</span>
+                                </button>
+                                <button class="color-btn" data-color="#4A4A4A" style="background-color: #4A4A4A">
+                                    <span>أسود</span>
+                                </button>
+                                <button class="color-btn" data-color="#8B4513" style="background-color: #8B4513">
+                                    <span>بني</span>
+                                </button>
+                                <button class="color-btn" data-color="#DAA520" style="background-color: #DAA520">
+                                    <span>ذهبي</span>
+                                </button>
+                            </div>
+                            <div class="custom-color">
+                                <label for="customColor">لون مخصص</label>
+                                <input type="color" id="customColor" value="#FFFFFF">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h3>نوع الزجاج</h3>
+                        <div class="glass-options">
+                            <button class="glass-btn active" data-glass="clear">
+                                <i class="fas fa-square"></i>
+                                <span>شفاف</span>
+                            </button>
+                            <button class="glass-btn" data-glass="frosted">
+                                <i class="fas fa-square"></i>
+                                <span>مصنفر</span>
+                            </button>
+                            <button class="glass-btn" data-glass="tinted">
+                                <i class="fas fa-square"></i>
+                                <span>معتم</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <h3>الأبعاد (سم)</h3>
+                        <div class="dimensions">
+                            <div class="dimension-input">
+                                <label for="width">العرض</label>
+                                <input type="number" id="width" value="100" min="50" max="300">
+                            </div>
+                            <div class="dimension-input">
+                                <label for="height">الارتفاع</label>
+                                <input type="number" id="height" value="120" min="50" max="300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <div class="price">
+                        <span class="current-price">2,499</span>
+                        <span class="currency">درهم</span>
+                    </div>
+                    <div class="quantity">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" max="99">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        أضف إلى السلة
+                    </button>
+                    <button class="save-design">
+                        <i class="fas fa-save"></i>
+                        احفظ التصميم
+                    </button>
+                    <button class="share-design">
+                        <i class="fas fa-share-alt"></i>
+                        شارك التصميم
+                    </button>
+                </div>
+
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ضمان 10 سنوات</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <span>توصيل مجاني</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tools"></i>
+                        <span>تركيب احترافي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

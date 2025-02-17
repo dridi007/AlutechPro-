@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تصفح مجموعتنا من نوافذ الألمنيوم عالية الجودة وقم بتخصيص تصميمك">
+    <title>منتجات الألمنيوم - تخصيص النوافذ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار الشركة" class="logo-img">
+            </div>
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="fr">Français</button>
+                </div>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-customizer">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="index.html" data-trans="home">الرئيسية</a> &gt;
+            <a href="#" data-trans="products">المنتجات</a> &gt;
+            <span data-trans="window-customizer">تخصيص النافذة</span>
+        </div>
+
+        <div class="product-viewer">
+            <div class="product-gallery">
+                <div class="product-main-image">
+                    <img id="mainWindowImage" src="images/window-1.png" alt="نافذة ألمنيوم">
+                    <div class="color-overlay" id="colorOverlay"></div>
+                    <button class="zoom-btn" id="zoomBtn">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                </div>
+                <div class="product-thumbnails">
+                    <button class="thumb active" data-image="window-1.png">
+                        <img src="images/window-1.png" alt="نموذج 1">
+                    </button>
+                    <button class="thumb" data-image="window-2.png">
+                        <img src="images/window-2.png" alt="نموذج 2">
+                    </button>
+                    <button class="thumb" data-image="window-3.png">
+                        <img src="images/window-3.png" alt="نموذج 3">
+                    </button>
+                    <button class="thumb" data-image="window-4.png">
+                        <img src="images/window-4.png" alt="نموذج 4">
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-options">
+                <div class="product-header">
+                    <h2 class="product-title" data-trans="window-customizer">تخصيص النافذة</h2>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(45 تقييم)</span>
+                    </div>
+                </div>
+                
+                <div class="product-tabs">
+                    <button class="tab-btn active" data-tab="design" data-trans="design">التصميم</button>
+                    <button class="tab-btn" data-tab="specs" data-trans="specifications">المواصفات</button>
+                    <button class="tab-btn" data-tab="reviews" data-trans="reviews">التقييمات</button>
+                </div>
+
+                <div class="tab-content active" data-tab="design">
+                    <div class="color-picker-section">
+                        <h3 data-trans="choose-color">اختر اللون</h3>
+                        <div class="color-presets">
+                            <button class="color-preset active" data-color="#4A4A4A" style="background-color: #4A4A4A;">
+                                <span data-trans="color-dark-gray">رمادي داكن</span>
+                            </button>
+                            <button class="color-preset" data-color="#8B4513" style="background-color: #8B4513;">
+                                <span data-trans="color-brown">بني</span>
+                            </button>
+                            <button class="color-preset" data-color="#C0C0C0" style="background-color: #C0C0C0;">
+                                <span data-trans="color-silver">فضي</span>
+                            </button>
+                            <button class="color-preset" data-color="#000000" style="background-color: #000000;">
+                                <span data-trans="color-black">أسود</span>
+                            </button>
+                            <button class="color-preset" data-color="#2F4F4F" style="background-color: #2F4F4F;">
+                                <span data-trans="color-charcoal">فحمي</span>
+                            </button>
+                            <button class="color-preset" data-color="#CD7F32" style="background-color: #CD7F32;">
+                                <span data-trans="color-bronze">برونزي</span>
+                            </button>
+                        </div>
+                        
+                        <div class="custom-color-picker">
+                            <label for="customColor" data-trans="custom-color">لون مخصص</label>
+                            <input type="color" id="customColor" value="#4A4A4A">
+                        </div>
+                    </div>
+
+                    <div class="product-specs">
+                        <div class="spec-group">
+                            <h3 data-trans="dimensions">الأبعاد</h3>
+                            <div class="dimension-inputs">
+                                <div class="input-group">
+                                    <label for="width" data-trans="width">العرض</label>
+                                    <div class="number-input">
+                                        <button type="button" class="minus">-</button>
+                                        <input type="number" id="width" min="60" max="200" value="100">
+                                        <button type="button" class="plus">+</button>
+                                    </div>
+                                    <span>سم</span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="height" data-trans="height">الارتفاع</label>
+                                    <div class="number-input">
+                                        <button type="button" class="minus">-</button>
+                                        <input type="number" id="height" min="60" max="200" value="120">
+                                        <button type="button" class="plus">+</button>
+                                    </div>
+                                    <span>سم</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spec-group">
+                            <h3 data-trans="glass-type">نوع الزجاج</h3>
+                            <div class="radio-group glass-options">
+                                <label class="radio-option">
+                                    <input type="radio" name="glassType" value="single" checked>
+                                    <span class="radio-content">
+                                        <i class="fas fa-glass-martini"></i>
+                                        <div class="radio-text">
+                                            <span data-trans="single-glass">زجاج عادي</span>
+                                            <small data-trans="single-glass-desc">مناسب للمناطق معتدلة المناخ</small>
+                                        </div>
+                                        <span class="price-tag">+0 د.م</span>
+                                    </span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="glassType" value="double">
+                                    <span class="radio-content">
+                                        <i class="fas fa-layer-group"></i>
+                                        <div class="radio-text">
+                                            <span data-trans="double-glass">زجاج مزدوج</span>
+                                            <small data-trans="double-glass-desc">عزل حراري وصوتي ممتاز</small>
+                                        </div>
+                                        <span class="price-tag">+200 د.م</span>
+                                    </span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="glassType" value="triple">
+                                    <span class="radio-content">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <div class="radio-text">
+                                            <span data-trans="triple-glass">زجاج ثلاثي</span>
+                                            <small data-trans="triple-glass-desc">أقصى درجات العزل والأمان</small>
+                                        </div>
+                                        <span class="price-tag">+400 د.م</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="spec-group">
+                            <h3 data-trans="handle-type">نوع المقبض</h3>
+                            <div class="handle-options">
+                                <label class="handle-option">
+                                    <input type="radio" name="handleType" value="standard" checked>
+                                    <img src="images/handle-standard.png" alt="مقبض قياسي">
+                                    <span data-trans="standard-handle">قياسي</span>
+                                </label>
+                                <label class="handle-option">
+                                    <input type="radio" name="handleType" value="premium">
+                                    <img src="images/handle-premium.png" alt="مقبض فاخر">
+                                    <span data-trans="premium-handle">فاخر</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-summary">
+                    <div class="price-section">
+                        <div class="price-details">
+                            <span class="price-label" data-trans="estimated-price">السعر التقديري:</span>
+                            <span class="price-value">1200 د.م</span>
+                        </div>
+                        <span class="vat-note">شامل ضريبة القيمة المضافة</span>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="save-design" data-trans="save-design">
+                            <i class="fas fa-save"></i>
+                            حفظ التصميم
+                        </button>
+                        <button class="add-to-cart" data-trans="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            إضافة للسلة
+                        </button>
+                        <button class="request-quote primary-button" data-trans="request-quote">
+                            <i class="fas fa-paper-plane"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-features">
+            <h3 data-trans="features">المميزات</h3>
+            <ul class="features-list">
+                <li>
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="feature-content">
+                        <strong data-trans="feature-security">حماية وأمان عالي</strong>
+                        <p data-trans="feature-security-desc">نظام قفل متعدد النقاط للحماية القصوى</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-temperature-low"></i>
+                    <div class="feature-content">
+                        <strong data-trans="feature-insulation">عزل حراري ممتاز</strong>
+                        <p data-trans="feature-insulation-desc">يحافظ على درجة حرارة المنزل</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-volume-mute"></i>
+                    <div class="feature-content">
+                        <strong data-trans="feature-soundproof">عزل صوتي متميز</strong>
+                        <p data-trans="feature-soundproof-desc">يقلل الضوضاء الخارجية بنسبة تصل إلى 40 ديسيبل</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <div class="feature-content">
+                        <strong data-trans="feature-durability">متانة تدوم طويلاً</strong>
+                        <p data-trans="feature-durability-desc">مقاومة عالية للعوامل الجوية والتآكل</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Product Recommendations -->
+        <div class="product-recommendations">
+            <h3 data-trans="related-products">منتجات ذات صلة</h3>
+            <div class="recommendations-slider">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-trans="contact-us">اتصل بنا</h4>
+                <p><i class="fas fa-phone"></i> +212-XXX-XXXXXX</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-trans="follow-us">تابعنا</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- Modal for zoomed image -->
+    <div class="zoom-modal" id="zoomModal">
+        <span class="close-modal">&times;</span>
+        <img id="zoomedImage" src="" alt="صورة مكبرة">
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
