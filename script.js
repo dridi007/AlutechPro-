@@ -1396,3 +1396,129 @@ contactForm?.addEventListener('submit', async (e) => {
         }, 3000);
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imagePreviewModal');
+    const modalImg = document.getElementById('previewImage');
+    const closeModal = document.getElementsByClassName('close-modal')[0];
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+// Initialize gallery functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('imagePreviewModal');
+    const modalImg = document.getElementById('previewImage');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // Function to show images with fade-in effect and error handling
+    function showImage(item) {
+        const img = item.querySelector('img');
+        if (img.dataset.src) {
+            // Add error handling
+            img.onerror = () => {
+                console.error('Failed to load image:', img.dataset.src);
+                item.classList.add('image-error');
+            };
+            
+            img.onload = () => {
+                console.log('Successfully loaded image:', img.dataset.src);
+                item.classList.add('show');
+                img.removeAttribute('data-src');
+            };
+            
+            img.src = img.dataset.src;
+        } else {
+            item.classList.add('show');
+        }
+    }
+
+    // Log total number of gallery items
+    console.log('Total gallery items:', galleryItems.length);
+
+    // Initialize Intersection Observer with error handling
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                showImage(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+
+    // Observe all gallery items
+    galleryItems.forEach((item, index) => {
+        observer.observe(item);
+        // Log each image source for debugging
+        const img = item.querySelector('img');
+        console.log(`Image ${index + 1} source:`, img.dataset.src);
+    });
+
+    // Modal functionality for image preview
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+        });
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+            
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filter items
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || filter === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.classList.add('show');
+                    }, 100);
+                } else {
+                    item.classList.remove('show');
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+});
